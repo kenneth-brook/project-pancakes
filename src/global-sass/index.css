@@ -1,11 +1,63 @@
 h1 {
   color: red;
+  align-self: center;
 }
 
 .App {
   width: 100%;
   min-height: 1000px;
   background-position: center;
+}
+.App .App-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: black;
+}
+.App .App-header .txt {
+  color: white;
+  background: black;
+  font-size: 150px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App .App-header .txt::before {
+  content: "PANCAKECAT.COM";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(3px);
+}
+.App .App-header .grad {
+  background: linear-gradient(90deg, #f34868 20.5581115978%, #ca5b89 23.9331667593%, #6d87d6 32.1833015985%, #4999f5 35.683358803%, #49f464 49.933591707%, #49f563 50.308597836%, #f3f549 66.8088675144%, #f5f549 67.1838736434%, #9e00ec 80.5590922463%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.App .App-header .dodge {
+  background: radial-gradient(circle, white, black 3%) center/20% 20%;
+  transform: rotate(20deg);
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: dodge-area 10s linear infinite;
+}
+@keyframes dodge-area {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
+.App .neon-wraper {
+  display: inline-flex;
+  filter: brightness(200%);
+  overflow: hidden;
 }
 
 body,
